@@ -62,10 +62,13 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
+        //Component
+        $mycomponent = Yii::$app->mycomponent->welcome(); 
+
          $users = User::find()->all();
          //echo "<pre>";print_r($users);
 
-         return $this->render('index', ['users' => $users]);
+         return $this->render('index', ['users' => $users,'mycomponent' => $mycomponent]);
     }
 
     /**

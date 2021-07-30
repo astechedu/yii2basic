@@ -51,6 +51,9 @@ $config = [
             ],
         ],
         */
+        'mycomponent' => [         
+            'class' => 'app\components\MyComponent',
+        ],         
     ],
     'params' => $params,
 ];

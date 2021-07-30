@@ -1,4 +1,7 @@
+<?php use yii\helpers\Html ;?>
 
+<br><br>
+<h1><?php echo Html::encode($mycomponent); ?></h1>
     <table class="table table-solid">
       <tr>
           <th>Id</th>
