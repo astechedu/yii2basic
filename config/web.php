@@ -53,7 +53,20 @@ $config = [
         */
         'mycomponent' => [         
             'class' => 'app\components\MyComponent',
-        ],         
+        ],  
+        /*Smtp email settings*/  
+        'mailer' => [
+            'class' => 'yii\swiftmailer\Mailer',
+            'useFileTransport' => false,
+            'transport' => [
+                'class' => 'Swift_SmtpTransport',
+                'encryption' => 'tls',
+                'host' => 'smtp.gmail.com',
+                'port' => '587',
+                'username' => 'yourEmailAddress@gmail.com',
+                'password' => 'yourEmailPassword',
+            ],             
+        ],               
     ],
     'params' => $params,
 ];

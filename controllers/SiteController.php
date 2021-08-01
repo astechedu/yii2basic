@@ -62,6 +62,15 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
+         //Smtp email setting
+           $content = "<h1>This is html template</h1><div>this is body text</div>";
+           $Email = Yii::$app->mailer->compose('@app/mail/layouts/html', ['content' => $content]);
+                $Email->setFrom(['from@gmail.com' => 'yii2basic']);
+                $Email->setTo('emailtestingapps@gmail.com');
+                $Email->setSubject('Message subject');
+                $Email->setTextBody('Plain text content');
+                $Email->send();        
+
         //Component
         $mycomponent = Yii::$app->mycomponent->welcome(); 
 
